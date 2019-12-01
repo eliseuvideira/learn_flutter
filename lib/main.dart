@@ -10,6 +10,14 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter Playground'),
         ),
+        body: Card(
+          child: Column(
+            children: <Widget>[
+              Image.asset('assets/food.jpg'),
+              Text('Food Paradise'),
+            ],
+          ),
+        ),
       ),
     );
   }

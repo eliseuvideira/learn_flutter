@@ -10,6 +10,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var _products = ['FoodTester'];
+
   @override
   build(context) {
     return MaterialApp(
@@ -26,13 +28,19 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () {},
               ),
             ),
-            Card(
-              child: Column(
-                children: [
-                  Image.asset('assets/food.jpg'),
-                  Text('Food Paradise'),
-                ],
-              ),
+            Column(
+              children: _products
+                  .map(
+                    (product) => Card(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/food.jpg'),
+                          Text(product),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
             ),
           ],
         ),

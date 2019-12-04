@@ -8,6 +8,10 @@ class MyApp extends StatelessWidget {
   build(context) {
     print('[MyApp] build()');
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.deepOrangeAccent,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Flutter Playground'),

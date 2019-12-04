@@ -10,7 +10,7 @@ class Products extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('[Products] build()');
-    return Column(
+    return ListView(
       children: products
           .map(
             (product) => Card(

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter Playground'),
         ),
-        body: ProductManager('Food Tester'),
+        body: ProductManager(startingProduct: 'Food Tester'),
       ),
     );
   }

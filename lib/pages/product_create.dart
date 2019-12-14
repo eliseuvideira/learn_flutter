@@ -13,6 +13,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
   String _title;
   String _description;
   double _price;
+  bool _acceptTerms = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +46,15 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
                 _price = double.parse(value);
               });
             },
+          ),
+          SwitchListTile(
+            value: _acceptTerms,
+            onChanged: (bool value) {
+              setState(() {
+                _acceptTerms = value;
+              });
+            },
+            title: Text('Accept Terms'),
           ),
           SizedBox(height: 10.0),
           RaisedButton(
